@@ -17,6 +17,24 @@
         </activity>
         <activity android:name=".LinksLayout" >
         </activity>
+        <activity android:name=".HoleOne" >
+        </activity>
+        <activity android:name=".HoleTwo" >
+        </activity>
+        <activity android:name=".HoleThree" >
+        </activity>
+        <activity android:name=".HoleFour" >
+        </activity>
+        <activity android:name=".HoleFive" >
+        </activity>
+        <activity android:name=".HoleSix" >
+        </activity>
+        <activity android:name=".HoleSeven" >
+        </activity>
+        <activity android:name=".HoleEight" >
+        </activity>
+        <activity android:name=".HoleNine" >
+        </activity>
     </application>
 
 </manifest>

@@ -8,23 +8,170 @@
     tools:context="ministeren.par3000.HoleOne">
 
     <TableLayout
+        android:id="@+id/controlTable"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/overskrift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="HUL 1"
+                android:layout_column="0"
+                android:textSize="40sp" />
+        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <Button
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Previous"
+                android:layout_weight="0.30" />
+
+            <Button
+                android:id="@+id/home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"/>
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:layout_weight="0.50" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/strokeTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/controlTable"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1.0"
+            android:minHeight="75dp">
+
+            <Button
+                android:id="@+id/stroke1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="1"
+                android:layout_column="0"
+                android:layout_weight="0.25"
+                android:layout_margin="5dp" />
+
+            <Button
+                android:id="@+id/stroke2"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="2"
+                android:layout_column="1"
+                android:layout_weight="0.25"
+                android:layout_margin="5dp" />
+
+            <Button
+                android:id="@+id/stroke3"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="3"
+                android:layout_column="2"
+                android:layout_weight="0.25"
+                android:layout_margin="5dp" />
+
+            <Button
+                android:id="@+id/stroke4"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="4"
+                android:layout_column="3"
+                android:layout_weight="0.25"
+                android:layout_margin="5dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1.0"
+            android:minHeight="75dp">
+
+            <Button
+                android:id="@+id/stroke5"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="5"
+                android:layout_column="0"
+                android:layout_weight="0.25"
+                android:layout_margin="5dp" />
+
+            <Button
+                android:id="@+id/stroke6"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="6"
+                android:layout_column="1"
+                android:layout_weight="0.25"
+                android:layout_margin="5dp" />
+
+            <Button
+                android:id="@+id/stroke7"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="7"
+                android:layout_column="2"
+                android:layout_weight="0.25"
+                android:layout_margin="5dp" />
+
+            <Button
+                android:id="@+id/stroke8"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="8+"
+                android:layout_column="3"
+                android:layout_weight="0.25"
+                android:layout_margin="5dp" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/scoreTable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/strokeTable"
+        android:layout_alignParentStart="true">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="35dp">
+
             <TextView
+                android:id="@+id/score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="HUL 1"
-                android:id="@+id/textView"
-                android:layout_column="0"
-                android:textSize="40sp" />
+                android:textSize="100dp" />
         </TableRow>
     </TableLayout>
+
 </RelativeLayout>

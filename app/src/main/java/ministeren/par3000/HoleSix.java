@@ -11,10 +11,16 @@ public class HoleSix extends AppCompatActivity implements View.OnClickListener{
 
     Button stroke1,stroke2,stroke3,stroke4,stroke5,stroke6,stroke7,stroke8;
     TextView score;
+    String[] scoreKort;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hole_six);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            scoreKort = extras.getStringArray("scoreKort");
+        }
 
         Button back = (Button) findViewById(R.id.back);
         Button home = (Button) findViewById(R.id.home);
@@ -32,15 +38,27 @@ public class HoleSix extends AppCompatActivity implements View.OnClickListener{
         score = (TextView) findViewById(R.id.score);
 
         back.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {
-            startActivity(new Intent(HoleSix.this, HoleFive.class));
+            //startActivity(new Intent(HoleOne.this, LinksLayout.class));
+            Intent i = new Intent(HoleSix.this, HoleFive.class);
+            i.putExtra("scoreKort",scoreKort);
+            i.putExtra("startetAf","holeSix");
+            startActivity(i);
         }});
 
         home.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {
-            startActivity(new Intent(HoleSix.this, MainActivity.class));
+            //startActivity(new Intent(HoleOne.this, MainActivity.class));
+            Intent i = new Intent(HoleSix.this, MainActivity.class);
+            i.putExtra("scoreKort",scoreKort);
+            i.putExtra("startetAf","holeSix");
+            startActivity(i);
         }});
 
         next.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {
-            startActivity(new Intent(HoleSix.this, HoleSeven.class));
+            //startActivity(new Intent(HoleOne.this, HoleTwo.class));
+            Intent i = new Intent(HoleSix.this, HoleSeven.class);
+            i.putExtra("scoreKort",scoreKort);
+            i.putExtra("startetAf","holeSix");
+            startActivity(i);
         }});
 
         stroke1.setOnClickListener(this);
@@ -55,13 +73,13 @@ public class HoleSix extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        if(v == stroke1){score.setText("1");}
-        if(v == stroke2){score.setText("2");}
-        if(v == stroke3){score.setText("3");}
-        if(v == stroke4){score.setText("4");}
-        if(v == stroke5){score.setText("5");}
-        if(v == stroke6){score.setText("6");}
-        if(v == stroke7){score.setText("7");}
-        if(v == stroke8){score.setText("8");}
+        if(v == stroke1){score.setText("1");scoreKort[6]="1";}
+        if(v == stroke2){score.setText("2");scoreKort[6]="2";}
+        if(v == stroke3){score.setText("3");scoreKort[6]="3";}
+        if(v == stroke4){score.setText("4");scoreKort[6]="4";}
+        if(v == stroke5){score.setText("5");scoreKort[6]="5";}
+        if(v == stroke6){score.setText("6");scoreKort[6]="6";}
+        if(v == stroke7){score.setText("7");scoreKort[6]="7";}
+        if(v == stroke8){score.setText("8");scoreKort[6]="8";}
     }
 }

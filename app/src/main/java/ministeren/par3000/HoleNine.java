@@ -11,14 +11,20 @@ public class HoleNine extends AppCompatActivity implements View.OnClickListener{
 
     Button stroke1,stroke2,stroke3,stroke4,stroke5,stroke6,stroke7,stroke8;
     TextView score;
+    String[] scoreKort;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hole_nine);
 
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            scoreKort = extras.getStringArray("scoreKort");
+        }
+
         Button back = (Button) findViewById(R.id.back);
         Button home = (Button) findViewById(R.id.home);
-        Button summery = (Button) findViewById(R.id.summary);
+        Button summary = (Button) findViewById(R.id.summary);
 
         stroke1 = (Button) findViewById(R.id.stroke1);
         stroke2 = (Button) findViewById(R.id.stroke2);
@@ -32,13 +38,28 @@ public class HoleNine extends AppCompatActivity implements View.OnClickListener{
         score = (TextView) findViewById(R.id.score);
 
         back.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {
-            startActivity(new Intent(HoleNine.this, HoleEight.class));}});
+            //startActivity(new Intent(HoleOne.this, LinksLayout.class));
+            Intent i = new Intent(HoleNine.this, HoleEight.class);
+            i.putExtra("scoreKort",scoreKort);
+            i.putExtra("startetAf","holeNine");
+            startActivity(i);
+        }});
 
         home.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {
-            startActivity(new Intent(HoleNine.this, MainActivity.class));}});
+            //startActivity(new Intent(HoleOne.this, MainActivity.class));
+            Intent i = new Intent(HoleNine.this, MainActivity.class);
+            i.putExtra("scoreKort",scoreKort);
+            i.putExtra("startetAf","holeNine");
+            startActivity(i);
+        }});
 
-        summery.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {
-            startActivity(new Intent(HoleNine.this, MainActivity.class));}});
+        summary.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {
+            //startActivity(new Intent(HoleOne.this, HoleTwo.class));
+            Intent i = new Intent(HoleNine.this, Summary.class);
+            i.putExtra("scoreKort",scoreKort);
+            i.putExtra("startetAf","holeNine");
+            startActivity(i);
+        }});
 
         stroke1.setOnClickListener(this);
         stroke2.setOnClickListener(this);
@@ -52,13 +73,13 @@ public class HoleNine extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        if(v == stroke1){score.setText("1");}
-        if(v == stroke2){score.setText("2");}
-        if(v == stroke3){score.setText("3");}
-        if(v == stroke4){score.setText("4");}
-        if(v == stroke5){score.setText("5");}
-        if(v == stroke6){score.setText("6");}
-        if(v == stroke7){score.setText("7");}
-        if(v == stroke8){score.setText("8");}
+        if(v == stroke1){score.setText("1");scoreKort[9]="1";}
+        if(v == stroke2){score.setText("2");scoreKort[9]="2";}
+        if(v == stroke3){score.setText("3");scoreKort[9]="3";}
+        if(v == stroke4){score.setText("4");scoreKort[9]="4";}
+        if(v == stroke5){score.setText("5");scoreKort[9]="5";}
+        if(v == stroke6){score.setText("6");scoreKort[9]="6";}
+        if(v == stroke7){score.setText("7");scoreKort[9]="7";}
+        if(v == stroke8){score.setText("8");scoreKort[9]="8";}
     }
 }

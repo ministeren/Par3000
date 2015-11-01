@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,7 +19,13 @@ public class MainActivity extends AppCompatActivity {
 
         newRound.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, LinksLayout.class));
+                //startActivity(new Intent(MainActivity.this, LinksLayout.class));
+                //ArrayList score = new ArrayList(10);
+                String scoreKort[] = new String[10];
+                Intent i = new Intent(getApplicationContext(), LinksLayout.class);
+                i.putExtra("scoreKort",scoreKort);
+                i.putExtra("startetAf","main");
+                startActivity(i);
             }
         });
 

@@ -4,7 +4,8 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="@drawable/ball_bw_169_2_720">
 
     <TableLayout
         android:layout_width="wrap_content"
@@ -15,7 +16,8 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -24,37 +26,52 @@
                 android:text="Par3000"
                 android:id="@+id/overskrift"
                 android:layout_column="0"
-                android:textSize="50dp"
-                android:layout_marginBottom="150dp" />
+                android:textSize="50sp"
+                android:textColor="#00ffff" />
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="10dp">
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Round"
-                android:id="@+id/ny" />
+                android:id="@+id/ny"
+                android:layout_gravity="center_horizontal"
+                android:width="120dp"
+                android:background="#00ffff" />
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="10dp">
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="History"
                 android:id="@+id/hist"
-                android:layout_column="0"
-                android:nestedScrollingEnabled="false" />
+                android:layout_gravity="center_horizontal"
+                android:width="120dp"
+                android:background="#00ffff" />
         </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Continue"
+                android:id="@+id/cont"
+                android:layout_gravity="center_horizontal"
+                android:width="120dp"
+                android:background="#00ffff" />
+        </TableRow>
     </TableLayout>
 </RelativeLayout>

@@ -1,38 +1,54 @@
 package ministeren.par3000;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+
+    private Button newRound, history, cont;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button newRound = (Button) findViewById(R.id.ny);
-        Button history = (Button) findViewById(R.id.hist);
+        newRound = (Button) findViewById(R.id.ny);
+        history = (Button) findViewById(R.id.hist);
+        cont = (Button) findViewById(R.id.cont);
 
-        newRound.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                //startActivity(new Intent(MainActivity.this, LinksLayout.class));
-                //ArrayList score = new ArrayList(10);
-                String scoreKort[] = new String[10];
-                Intent i = new Intent(getApplicationContext(), LinksLayout.class);
-                i.putExtra("scoreKort",scoreKort);
-                i.putExtra("startetAf","main");
+        newRound.setOnClickListener(this);
+        history.setOnClickListener(this);
+        cont.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v==newRound){
+            Intent i = new Intent(getApplicationContext(), LinksLayout.class);
+            SingleTon.scoreListe  = new int[9];
+            SingleTon.aktueltHul = 0;
+            startActivity(i);
+        }
+
+        if (v==history){
+
+        }
+
+        if (v==cont){
+            if (SingleTon.scoreListe==null){
+                Toast.makeText(v.getContext(),"Der er ingen iganværende runde",Toast.LENGTH_LONG).show();
+            } else {
+                Intent i = new Intent(getApplicationContext(), Hole.class);
                 startActivity(i);
             }
-        });
+        }
 
-        history.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-            }
-        });
     }
 }

@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorLightCyan">#CC00ffff</color>
+    <color name="colorControlButton">#CC00ffff</color>
+    <color name="colorStrokeButton">#CC00ffff</color>
+    <color name="colorMainButton">#CC00ffff</color>
+    <color name="colorScoreSummary">#CC00ffff</color>
 </resources>

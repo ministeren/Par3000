@@ -27,7 +27,7 @@
                 android:id="@+id/showDate"
                 android:layout_column="0"
                 android:textSize="30sp"
-                android:textColor="#00ffff" />
+                android:textColor="@color/colorLightCyan" />
         </TableRow>
         <FrameLayout
             android:id="@+id/linksframe"

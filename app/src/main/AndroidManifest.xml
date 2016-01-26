@@ -1,42 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ministeren.par3000" >
+    package="ministeren.par3000">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".SingleTon"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
-        <activity android:name=".MainActivity" >
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LinksLayout" >
-        </activity>
-        <activity android:name=".HoleOne" >
-        </activity>
-        <activity android:name=".HoleTwo" >
-        </activity>
-        <activity android:name=".HoleThree" >
-        </activity>
-        <activity android:name=".HoleFour" >
-        </activity>
-        <activity android:name=".HoleFive" >
-        </activity>
-        <activity android:name=".HoleSix" >
-        </activity>
-        <activity android:name=".HoleSeven" >
-        </activity>
-        <activity android:name=".HoleEight" >
-        </activity>
-        <activity android:name=".HoleNine" >
-        </activity>
-        <activity android:name=".Summary" >
-        </activity>
+        <activity android:name=".LinksLayout"></activity>
+        <activity android:name=".HoleOne"></activity>
+        <activity android:name=".Summary2"></activity>
+        <activity
+            android:name=".Hole"
+            android:label="@string/title_activity_hole"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <meta-data
+            android:name="com.parse.APPLICATION_ID"
+            android:value="YYSElHDSVWLSystPdP0ghkc3ffmXQ1Kg2Md80OP8" />
+        <meta-data
+            android:name="com.parse.CLIENT_KEY"
+            android:value="CLWMKS8Aaidke7l2qiXvcjfULx7qWBUMwNqpDICc" />
     </application>
 
 </manifest>

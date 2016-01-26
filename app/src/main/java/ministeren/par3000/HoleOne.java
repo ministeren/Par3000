@@ -55,10 +55,10 @@ public class HoleOne extends AppCompatActivity implements View.OnClickListener{
 
         next.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {
             //startActivity(new Intent(HoleOne.this, HoleTwo.class));
-            Intent i = new Intent(HoleOne.this, HoleTwo.class);
-            i.putExtra("scoreKort",scoreKort);
-            i.putExtra("startetAf","holeOne");
-            startActivity(i);
+//            Intent i = new Intent(HoleOne.this, HoleTwo.class);
+//            i.putExtra("scoreKort",scoreKort);
+//            i.putExtra("startetAf","holeOne");
+//            startActivity(i);
         }});
 
         stroke1.setOnClickListener(this);

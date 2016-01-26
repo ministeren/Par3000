@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:text="Previous"
                 android:layout_weight="2"
-                android:background="#00ffff"
+                android:background="@color/colorControlButton"
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
                 android:textColor="#000000" />
@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:text="Home"
                 android:layout_weight="1"
-                android:background="#00ffff"
+                android:background="@color/colorControlButton"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:textColor="#000000" />
@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:text="Next"
                 android:layout_weight="2"
-                android:background="#00ffff"
+                android:background="@color/colorControlButton"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:textColor="#000000" />
@@ -97,7 +97,7 @@
                 android:layout_height="fill_parent"
                 android:text="1"
                 android:textColor="#000000"
-                android:background="#00ffff"
+                android:background="@color/colorStrokeButton"
                 android:layout_column="0"
                 android:layout_weight="0.25"
                 android:layout_margin="5dp" />
@@ -109,7 +109,7 @@
                 android:layout_height="fill_parent"
                 android:text="2"
                 android:textColor="#000000"
-                android:background="#00ffff"
+                android:background="@color/colorStrokeButton"
                 android:layout_column="1"
                 android:layout_weight="0.25"
                 android:layout_margin="5dp" />
@@ -121,7 +121,7 @@
                 android:layout_height="fill_parent"
                 android:text="3"
                 android:textColor="#000000"
-                android:background="#00ffff"
+                android:background="@color/colorStrokeButton"
                 android:layout_column="2"
                 android:layout_weight="0.25"
                 android:layout_margin="5dp" />
@@ -133,7 +133,7 @@
                 android:layout_height="fill_parent"
                 android:text="4"
                 android:textColor="#000000"
-                android:background="#00ffff"
+                android:background="@color/colorStrokeButton"
                 android:layout_column="3"
                 android:layout_weight="0.25"
                 android:layout_margin="5dp" />
@@ -153,7 +153,7 @@
                 android:layout_height="fill_parent"
                 android:text="5"
                 android:textColor="#000000"
-                android:background="#00ffff"
+                android:background="@color/colorStrokeButton"
                 android:layout_column="0"
                 android:layout_weight="0.25"
                 android:layout_margin="5dp" />
@@ -165,7 +165,7 @@
                 android:layout_height="fill_parent"
                 android:text="6"
                 android:textColor="#000000"
-                android:background="#00ffff"
+                android:background="@color/colorStrokeButton"
                 android:layout_column="1"
                 android:layout_weight="0.25"
                 android:layout_margin="5dp" />
@@ -177,7 +177,7 @@
                 android:layout_height="fill_parent"
                 android:text="7"
                 android:textColor="#000000"
-                android:background="#00ffff"
+                android:background="@color/colorStrokeButton"
                 android:layout_column="2"
                 android:layout_weight="0.25"
                 android:layout_margin="5dp" />
@@ -189,7 +189,7 @@
                 android:layout_height="fill_parent"
                 android:text="8+"
                 android:textColor="#000000"
-                android:background="#00ffff"
+                android:background="@color/colorStrokeButton"
                 android:layout_column="3"
                 android:layout_weight="0.25"
                 android:layout_margin="5dp" />

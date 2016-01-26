@@ -13,7 +13,7 @@ import android.util.Log;
 
 public class LinksLayout extends AppCompatActivity{
 
-    String[] scoreKort;
+//    String[] scoreKort;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +22,11 @@ public class LinksLayout extends AppCompatActivity{
         TextClock ur = (TextClock) findViewById(R.id.showDate);
         ur.setFormat24Hour("HH:mm - dd/MM/yyyy");
 
-        Bundle extras = getIntent().getExtras();
-        if (extras != null && extras.getString("startetAf").equalsIgnoreCase("main")) {
-            scoreKort = extras.getStringArray("scoreKort");
-            scoreKort[0]= (String) ur.getText();
-        }
+//        Bundle extras = getIntent().getExtras();
+//        if (extras != null && extras.getString("startetAf").equalsIgnoreCase("main")) {
+//            scoreKort = extras.getStringArray("scoreKort");
+//            scoreKort[0]= (String) ur.getText();
+//        }
 
         ImageView linkstouch = (ImageView) findViewById(R.id.linkstouch);
         //ImageView links = (ImageView) findViewById(R.id.links);
@@ -56,57 +56,66 @@ public class LinksLayout extends AppCompatActivity{
     public void closeMatch(int color, int tolerance) {
         if (Math.abs (Color.GREEN - color) < tolerance ){
             //startActivity(new Intent(LinksLayout.this, HoleOne.class));
-            Intent i = new Intent(LinksLayout.this, HoleOne.class);
-            i.putExtra("scoreKort",scoreKort);
-            i.putExtra("startetAf","linksLayout");
+            Intent i = new Intent(LinksLayout.this, Hole.class);
+            SingleTon.aktueltHul=0;
+//            i.putExtra("scoreKort",scoreKort);
+//            i.putExtra("startetAf","linksLayout");
             startActivity(i);
         } else if (Math.abs (Color.DKGRAY - color) < tolerance ){
             //startActivity(new Intent(LinksLayout.this, HoleTwo.class));
-            Intent i = new Intent(LinksLayout.this, HoleTwo.class);
-            i.putExtra("scoreKort",scoreKort);
-            i.putExtra("startetAf","linksLayout");
+            Intent i = new Intent(LinksLayout.this, Hole.class);
+            SingleTon.aktueltHul=1;
+//            i.putExtra("scoreKort",scoreKort);
+//            i.putExtra("startetAf","linksLayout");
             startActivity(i);
         } else if (Math.abs (Color.CYAN - color) < tolerance ){
             //startActivity(new Intent(LinksLayout.this, HoleThree.class));
-            Intent i = new Intent(LinksLayout.this, HoleThree.class);
-            i.putExtra("scoreKort",scoreKort);
-            i.putExtra("startetAf","linksLayout");
+            Intent i = new Intent(LinksLayout.this, Hole.class);
+            SingleTon.aktueltHul=2;
+//            i.putExtra("scoreKort",scoreKort);
+//            i.putExtra("startetAf","linksLayout");
             startActivity(i);
         } else if (Math.abs (Color.MAGENTA - color) < tolerance ){
             //startActivity(new Intent(LinksLayout.this, HoleFour.class));
-            Intent i = new Intent(LinksLayout.this, HoleFour.class);
-            i.putExtra("scoreKort",scoreKort);
-            i.putExtra("startetAf","linksLayout");
+            Intent i = new Intent(LinksLayout.this, Hole.class);
+            SingleTon.aktueltHul=3;
+//            i.putExtra("scoreKort",scoreKort);
+//            i.putExtra("startetAf","linksLayout");
             startActivity(i);
         } else if (Math.abs (Color.LTGRAY - color) < tolerance ){
             //startActivity(new Intent(LinksLayout.this, HoleFive.class));
-            Intent i = new Intent(LinksLayout.this, HoleFive.class);
-            i.putExtra("scoreKort",scoreKort);
-            i.putExtra("startetAf","linksLayout");
+            Intent i = new Intent(LinksLayout.this, Hole.class);
+            SingleTon.aktueltHul=4;
+//            i.putExtra("scoreKort",scoreKort);
+//            i.putExtra("startetAf","linksLayout");
             startActivity(i);
         } else if (Math.abs (Color.YELLOW - color) < tolerance ){
             //startActivity(new Intent(LinksLayout.this, HoleSix.class));
-            Intent i = new Intent(LinksLayout.this, HoleSix.class);
-            i.putExtra("scoreKort",scoreKort);
-            i.putExtra("startetAf","linksLayout");
+            Intent i = new Intent(LinksLayout.this, Hole.class);
+            SingleTon.aktueltHul=5;
+//            i.putExtra("scoreKort",scoreKort);
+//            i.putExtra("startetAf","linksLayout");
             startActivity(i);
         } else if (Math.abs (Color.RED - color) < tolerance ){
             //startActivity(new Intent(LinksLayout.this, HoleSeven.class));
-            Intent i = new Intent(LinksLayout.this, HoleSeven.class);
-            i.putExtra("scoreKort",scoreKort);
-            i.putExtra("startetAf","linksLayout");
+            Intent i = new Intent(LinksLayout.this, Hole.class);
+            SingleTon.aktueltHul=6;
+//            i.putExtra("scoreKort",scoreKort);
+//            i.putExtra("startetAf","linksLayout");
             startActivity(i);
         } else if (Math.abs (Color.GRAY - color) < tolerance ){
             //startActivity(new Intent(LinksLayout.this, HoleEight.class));
-            Intent i = new Intent(LinksLayout.this, HoleEight.class);
-            i.putExtra("scoreKort",scoreKort);
-            i.putExtra("startetAf","linksLayout");
+            Intent i = new Intent(LinksLayout.this, Hole.class);
+            SingleTon.aktueltHul=7;
+//            i.putExtra("scoreKort",scoreKort);
+//            i.putExtra("startetAf","linksLayout");
             startActivity(i);
         } else if (Math.abs (Color.BLUE - color) < tolerance ){
             //startActivity(new Intent(LinksLayout.this, HoleNine.class));
-            Intent i = new Intent(LinksLayout.this, HoleNine.class);
-            i.putExtra("scoreKort",scoreKort);
-            i.putExtra("startetAf","linksLayout");
+            Intent i = new Intent(LinksLayout.this, Hole.class);
+            SingleTon.aktueltHul=8;
+//            i.putExtra("scoreKort",scoreKort);
+//            i.putExtra("startetAf","linksLayout");
             startActivity(i);
         }
     }

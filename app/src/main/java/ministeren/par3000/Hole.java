@@ -71,7 +71,7 @@ public class Hole extends AppCompatActivity implements View.OnClickListener{
             //startActivity(new Intent(HoleOne.this, HoleTwo.class));
             Intent i;
             if (SingleTon.aktueltHul==8){
-                i = new Intent(Hole.this, Summary2.class);
+                i = new Intent(Hole.this, Summary.class);
             } else {
                 SingleTon.aktueltHul++;
                 i = new Intent(Hole.this, Hole.class);

@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Summary2 extends AppCompatActivity {
+public class Summary extends AppCompatActivity {
 
     TextView sumhul1,sumhul2,sumhul3,sumhul4,sumhul5,sumhul6,sumhul7,sumhul8,sumhul9,resultat;
 //    String[] scoreKort;
@@ -15,14 +15,14 @@ public class Summary2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_summary2);
+        setContentView(R.layout.activity_summary);
 
         Button back = (Button) findViewById(R.id.back);
         Button home = (Button) findViewById(R.id.home);
 
         back.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {
             //startActivity(new Intent(HoleOne.this, LinksLayout.class));
-            Intent i = new Intent(Summary2.this, Hole.class);
+            Intent i = new Intent(Summary.this, Hole.class);
 //            i.putExtra("scoreKort",scoreKort);
 //            i.putExtra("startetAf","holeOne");
             startActivity(i);
@@ -30,7 +30,7 @@ public class Summary2 extends AppCompatActivity {
 
         home.setOnClickListener(new View.OnClickListener() {public void onClick(View v) {
             //startActivity(new Intent(HoleOne.this, MainActivity.class));
-            Intent i = new Intent(Summary2.this, MainActivity.class);
+            Intent i = new Intent(Summary.this, MainActivity.class);
 //            i.putExtra("scoreKort",scoreKort);
 //            i.putExtra("startetAf","holeOne");
             startActivity(i);
